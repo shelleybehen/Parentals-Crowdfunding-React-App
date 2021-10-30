@@ -5,6 +5,7 @@ import NavigationComponent from "./components/Nav/Nav.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
 import LoginPage from "./pages/LoginPage";
+import CreateProjectPage from "./pages/CreateProjectPage";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         </Route>
          <Route path="/login">
         <LoginPage />
+        </Route>
+        <Route path="/createprojectpage">
+        <CreateProjectPage />
         </Route>
         <Route exactpath="/">
         <HomePage />
