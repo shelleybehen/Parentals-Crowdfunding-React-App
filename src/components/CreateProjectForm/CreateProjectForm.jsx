@@ -28,14 +28,14 @@ const CreateProjectForm = () => {
     const postData = async () => {
     console.log('Im posting a project to your API');
     const token = window.localStorage.getItem('token');
-    console.log("What is token: ", token)
+    console.log('What is token: ', token)
     
     const response = await fetch(
         `${process.env.REACT_APP_API_URL}projects/`,
         {
         method: 'post',
         headers: {
-            "Authorization": `Token ${token}`,
+            'Authorization': `Token ${token}`,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(projectInfo),
@@ -57,14 +57,14 @@ const CreateProjectForm = () => {
     
     
     return (
-        <div className="project-page">
-            <div className="proj-form">
-                <p className="sign2" align="center">Create a new Campaign</p>
-        <form onSubmit={handleSubmit} className="form2">
+        <div className='project-page'>
+            <div className='proj-form'>
+                <p className='sign2' align='center'>Create a new Campaign</p>
+        <form onSubmit={handleSubmit} className='form2'>
         <div>
         <label className='label1' htmlFor='title'>Project Title: </label>
         <input
-            className="field2"
+            className='field2'
             type='text'
             id='title'
             placeholder='Enter Project Title'
@@ -74,7 +74,7 @@ const CreateProjectForm = () => {
         <div>
         <label className='label1' htmlFor='description'>Project Description: </label>
         <input
-            className="field2"
+            className='field2'
             type='text'
             id='description'
             placeholder='Enter Project Description'
@@ -84,7 +84,7 @@ const CreateProjectForm = () => {
         <div>
         <label className='label1' htmlFor='categories'>Project Category: </label>
         <input
-            className="field2"
+            className='field2'
             type='text'
             id='categories'
             placeholder='Enter Project Category'
@@ -94,7 +94,7 @@ const CreateProjectForm = () => {
         <div>
         <label className='label1' htmlFor='goal'>Project Hours Goal: </label>
         <input
-            className="field2"
+            className='field2'
             type= 'text'
             id='goal'
             placeholder='Enter Project Hours Goal'
@@ -104,7 +104,7 @@ const CreateProjectForm = () => {
         <div>
         <label className='label1' htmlFor='image'>Submit an Image: </label>
         <input
-            className="field2"
+            className='field2'
             type='text'
             id='image'
             placeholder='Add Image URL'
@@ -113,7 +113,7 @@ const CreateProjectForm = () => {
         </div>
         <div>
         <button 
-            className="submit2" 
+            className='submit2' 
             align='center'
             type='submit'
             onClick={handleSubmit}

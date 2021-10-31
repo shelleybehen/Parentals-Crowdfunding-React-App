@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import ProjectCard from "../components/ProjectCard/ProjectCard";
+import React, { useState, useEffect } from 'react';
+import ProjectCard from '../components/ProjectCard/ProjectCard';
 
 function HomePage() {
     const [projectList, setProjectList] = useState([]);
@@ -14,7 +14,7 @@ function HomePage() {
         });
     }, []);
     return (
-        <div id="project-list">
+        <div id='project-list'>
         {projectList.map((projectData, key) => {
             return <ProjectCard key={key} projectData={projectData}/>;
             })
