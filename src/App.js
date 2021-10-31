@@ -5,7 +5,10 @@ import NavigationComponent from "./components/Nav/Nav.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
 import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 import CreateProjectPage from "./pages/CreateProjectPage";
+import Footer from './components/Footer/Footer'
+
 
 function App() {
   return (
@@ -17,8 +20,11 @@ function App() {
       <Route path="/project/:id">
         <ProjectPage />
         </Route>
-         <Route path="/login">
+        <Route path="/login">
         <LoginPage />
+        </Route>
+        <Route path="/users">
+        <RegisterPage />
         </Route>
         <Route path="/createprojectpage">
         <CreateProjectPage />
@@ -27,9 +33,14 @@ function App() {
         <HomePage />
         </Route>
        </Switch>
+       
+          <Footer>
+
+          </Footer>
       </div>
     </Router>
   );
 }
+
 
 export default App;

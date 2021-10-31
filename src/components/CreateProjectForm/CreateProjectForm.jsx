@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
+import './CreateProjectForm.css'
 
 const CreateProjectForm = () => {
-    const history = useHistory ();
+    // const history = useHistory ();
     const [projectInfo, setProjectInfo] = useState({
         title: '',
         description: '',
@@ -56,10 +57,14 @@ const CreateProjectForm = () => {
     
     
     return (
-        <form onSubmit={handleSubmit}>
+        <div className="project-page">
+            <div className="proj-form">
+                <p className="sign2" align="center">Create a new Campaign</p>
+        <form onSubmit={handleSubmit} className="form2">
         <div>
-        <label htmlFor='title'>Project Title: </label>
+        <label className='label1' htmlFor='title'>Project Title: </label>
         <input
+            className="field2"
             type='text'
             id='title'
             placeholder='Enter Project Title'
@@ -67,8 +72,9 @@ const CreateProjectForm = () => {
         />
         </div>
         <div>
-        <label htmlFor='description'>Project Description: </label>
+        <label className='label1' htmlFor='description'>Project Description: </label>
         <input
+            className="field2"
             type='text'
             id='description'
             placeholder='Enter Project Description'
@@ -76,8 +82,9 @@ const CreateProjectForm = () => {
         />
         </div>
         <div>
-        <label htmlFor='categories'>Project Category: </label>
+        <label className='label1' htmlFor='categories'>Project Category: </label>
         <input
+            className="field2"
             type='text'
             id='categories'
             placeholder='Enter Project Category'
@@ -85,8 +92,9 @@ const CreateProjectForm = () => {
         />
         </div>
         <div>
-        <label htmlFor='goal'>Project Hours Goal: </label>
+        <label className='label1' htmlFor='goal'>Project Hours Goal: </label>
         <input
+            className="field2"
             type= 'text'
             id='goal'
             placeholder='Enter Project Hours Goal'
@@ -94,8 +102,9 @@ const CreateProjectForm = () => {
         />
         </div>
         <div>
-        <label htmlFor='image'>Submit an Image: </label>
+        <label className='label1' htmlFor='image'>Submit an Image: </label>
         <input
+            className="field2"
             type='text'
             id='image'
             placeholder='Add Image URL'
@@ -103,13 +112,18 @@ const CreateProjectForm = () => {
         />
         </div>
         <div>
-        <button type='submit'
-        // onClick={handleSubmit}
+        <button 
+            className="submit2" 
+            align='center'
+            type='submit'
+            onClick={handleSubmit}
         >
-            Submit New Project: 
+            Submit
         </button>
         </div>
         </form>
+            </div >
+        </div>
   );
 };
 

@@ -1,0 +1,90 @@
+body {
+  background-color: #68dd56;
+  font-family: Poppins, sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+label.label1 {
+  display: inline-block;
+  width: 10em;
+  text-align: right;
+  margin-right: 1em;
+}
+
+input {
+  display: inline-block;
+}
+
+.proj-form {
+  background-color: white;
+  margin: 7em auto;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  width: 60%;
+  padding: 10px;
+}
+
+form.form2 {
+  padding-top: 40px;
+  background-color: grey;
+}
+
+.sign2 {
+  padding-top: 40px;
+  color: #1553ffe6;
+  font-size: 23px;
+}
+
+.field2 {
+  width: 50%;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(136, 126, 126, 0.1);
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  box-sizing: content-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 50px;
+  margin-left: 46px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: Poppins, sans-serif;
+  background-color: white;
+}
+
+form.modal2 {
+  padding-top: 40px;
+}
+
+.field2:hover {
+  border: 2px solid #1553ffe6;
+}
+
+.submit2 {
+  cursor: pointer;
+  color: #fff;
+  background: #1553ffe6;
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 1rem;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-bottom: 2%;
+}
+
+.submit2:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .proj-form {
+    border-radius: 0px;
+  }
+}

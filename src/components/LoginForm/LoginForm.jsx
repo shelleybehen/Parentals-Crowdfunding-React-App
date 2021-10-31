@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import './LoginForm.css'
 
 function LoginForm() {
     const [credentials, setCredentials] = useState({
@@ -40,31 +41,21 @@ function LoginForm() {
         }
     };
     return (
-        <form>
-        <div>
-        <label htmlFor="username">Username:</label>
-        <input
-            type="text"
-            id="username"
-            placeholder="Enter username"
-            onChange={handleChange}
-        />
+        <div className="login-page">
+            <div className="main">
+            <p className="sign" align="center">Login</p>
+            <form onSubmit={handleSubmit} className="form1">
+                <div>
+                <input className="field"  align="center"type="text" id="username" placeholder="Enter Username" onChange={handleChange} />
+                </div>
+                <div>
+                <input className="field"  align="center" type="password" id="password" placeholder="Password" onChange={handleChange} />
+                </div>
+                    <button className="submit" align="center" type="submit" onClick={handleSubmit}>Submit</button>
+                </form>
+            </div >
         </div>
-
-        <div>
-        <label htmlFor="password">Password:</label>
-        <input
-            type="password"
-            id="password"
-            placeholder="Password"
-            onChange={handleChange}
-        />
-        </div>
-        <button type="submit" onClick={handleSubmit}>
-        Login
-        </button>
-        </form>
-    );
+    )
 }
         
 export default LoginForm;
