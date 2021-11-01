@@ -4,7 +4,7 @@ import './CreateProjectForm.css'
 
 const CreateProjectForm = () => {
     // const history = useHistory ();
-    const [projectInfo, setProjectInfo] = useState({
+    const startingValues = {
         title: '',
         description: '',
         categories: '',
@@ -12,7 +12,8 @@ const CreateProjectForm = () => {
         image: '',
         is_open: true,
         date_created: new Date()
-    });
+    }
+    const [projectInfo, setProjectInfo] = useState(startingValues)
     
 
     const handleChange = (event) => {
@@ -49,6 +50,7 @@ const CreateProjectForm = () => {
         // if (window.localStorage.getItem('token')) {
         postData().then((response) => {
             console.log('response from our API --------', response);
+            setProjectInfo(startingValues)
           // window.localStorage.setItem('token', response.token);
           // history.push('/');
         });
@@ -60,10 +62,11 @@ const CreateProjectForm = () => {
         <div className='project-page'>
             <div className='proj-form'>
                 <p className='sign2' align='center'>Create a new Campaign</p>
-        <form onSubmit={handleSubmit} className='form2'>
+        <form className='form2'>
         <div>
         <label className='label1' htmlFor='title'>Project Title: </label>
         <input
+            value={projectInfo.title}
             className='field2'
             type='text'
             id='title'
@@ -74,6 +77,7 @@ const CreateProjectForm = () => {
         <div>
         <label className='label1' htmlFor='description'>Project Description: </label>
         <input
+            value={projectInfo.description}
             className='field2'
             type='text'
             id='description'
@@ -84,6 +88,7 @@ const CreateProjectForm = () => {
         <div>
         <label className='label1' htmlFor='categories'>Project Category: </label>
         <input
+            value={projectInfo.categories}
             className='field2'
             type='text'
             id='categories'
@@ -94,6 +99,7 @@ const CreateProjectForm = () => {
         <div>
         <label className='label1' htmlFor='goal'>Project Hours Goal: </label>
         <input
+            value={projectInfo.goal}
             className='field2'
             type= 'text'
             id='goal'
@@ -104,6 +110,7 @@ const CreateProjectForm = () => {
         <div>
         <label className='label1' htmlFor='image'>Submit an Image: </label>
         <input
+            value={projectInfo.image}
             className='field2'
             type='text'
             id='image'
@@ -122,7 +129,7 @@ const CreateProjectForm = () => {
         </button>
         </div>
         </form>
-            </div >
+            </div>
         </div>
   );
 };

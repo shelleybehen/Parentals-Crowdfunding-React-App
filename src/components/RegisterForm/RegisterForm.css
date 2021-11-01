@@ -18,7 +18,7 @@ input {
 }
 
 form.form3 {
-  padding-top: 40px;
+  padding-top: 20px;
   background-color: grey;
 }
 
@@ -40,8 +40,8 @@ form.form3 {
   font-family: Poppins, sans-serif;
   background-color: white;
   width: 60%;
-  margin-left: 40%;
-  margin-right: 40%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .field3:hover {

@@ -4,12 +4,13 @@ import './RegisterForm.css'
 
 const RegisterForm= () => {
     // const history = useHistory ();
-    const [userInfo, setUserInfo] = useState({
+    
+    const startingValues = {
         username: '',
         email: '',
         password: ''
-    });
-    
+    }
+    const [userInfo, setUserInfo] = useState(startingValues)
 
     const handleChange = (event) => {
         const { id, value } = event.target;
@@ -23,7 +24,7 @@ const RegisterForm= () => {
   
     const postData = async () => {
     console.log('Im posting a user to your API');
-    
+    setUserInfo(startingValues)
     const response = await fetch(
         `${process.env.REACT_APP_API_URL}users/`,
         {
@@ -49,15 +50,15 @@ const RegisterForm= () => {
         <div className="user-page">
             <div className="user-form">
                 <p className="sign3" align="center">Create a User Account</p>
-        <form onSubmit={handleSubmit} className="form3">
+        <form className="form3">
         <div>
-            <input className="field3"  align="center" type="text" id="username" placeholder="Enter Username" onChange={handleChange} />
+            <input value={userInfo.username} className="field3"  align="center" type="text" id="username" placeholder="Enter Username" onChange={handleChange} />
         </div>
         <div>
-            <input className="field3"  align="center" type="text" id="email" placeholder="Enter Email" onChange={handleChange} />
+            <input value={userInfo.email} className="field3"  align="center" type="text" id="email" placeholder="Enter Email" onChange={handleChange} />
         </div>
         <div>
-    <input className="field3"  align="center" type="password" id="password" placeholder="Password" onChange={handleChange} />
+    <input value={userInfo.password} className="field3"  align="center" type="password" id="password" placeholder="Password" onChange={handleChange} />
         </div>
         <div>
             <button className="submit2" align="center" type="submit" onClick={handleSubmit}>Submit</button>

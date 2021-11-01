@@ -7,7 +7,7 @@ const Nav = () => {
     return (
         <nav>
         <div className='heading'>
-            <Link className='logo' to='/aboutpage'>PARENTALS</Link>
+            <Link className='logo' to='/'>PARENTALS</Link>
         </div>
 
         <div className='nav-links'>

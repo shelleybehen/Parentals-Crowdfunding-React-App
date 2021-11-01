@@ -51,7 +51,7 @@ function LoginForm() {
                 <div>
                 <input className='field' align='center' type='password' id='password' placeholder='Password' onChange={handleChange} />
                 </div>
-                    <button className='submit' align='center' type='submit' onClick={handleSubmit}>Submit</button>
+                    <button className='submit' align='center' type='submit'>Submit</button>
                 </form>
             </div >
         </div>
