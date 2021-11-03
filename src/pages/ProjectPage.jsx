@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 
 
-const ProjectPage = () => {
+function ProjectPage() {
     const [projectData, setProjectData] = useState({ pledges: [] });
     const [isEditing, setIsEditing] = useState(false);
     const [error, setError] = useState(null);
@@ -11,57 +11,61 @@ const ProjectPage = () => {
     const formattedDate = new Date(projectData.date_created).toLocaleDateString();
 
     useEffect(() => {
+        //get project data - but this time it's the single project ID
         fetch(`${process.env.REACT_APP_API_URL}projects/${project_id}`)
           .then((results) => {
+            console.log("results", results);
             return results.json();
           })
           .then((data) => {
+            console.log("data", data);
             setProjectData(data);
           });
-      }, [ project_id ]);
+      }, [project_id]);
 
-const handleChange = (event) => {
-    const { id, value } = event.target
-    console.log("We are updating the ", id, " to be: ", value)
-    setProjectData({
-      ...projectData,
-      [id]: value
-    })
-  }
+    const handleChange = (e) => {
+        const { id, value } = e.target;
+        console.log("we are updating the project");
+        setProjectData({
+          ...projectData,
+          [id]: value,
+        });
+    };
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
     try {
         const response = await fetch(
-        `${process.env.REACT_APP_API_URL}projects/${project_id}`, 
-        {
+          `${process.env.REACT_APP_API_URL}projects/${project_id}/`,
+          {
             method: "put",
             headers: {
-            "Authorization": `Token ${localStorage.getItem('token')}`,
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(projectData),
-        }
-    );
+              Authorization: `Token ${localStorage.getItem("token")}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(projectData),
+          }
+        );
         if (!response.ok) {
-        const { detail } = await response.json()
-        throw new Error(detail)
+          const { detail } = await response.json()
+          throw new Error(detail)
+        }
+      } catch(err) {
+        if (err.message === "You do not have permission to perform this action.") {
+          history.push("/forbidden")
+        }
+        setError(err.message)
       }
-        } catch(err) {
-      if (err.message === "You do not have permission to perform this action.") {
-        history.push("/forbidden")
-      }
-      setError(err.message)
-    }
-    // setIsEditing(false);
-  };
+      // setIsEditing(false);
+    };
 
   const ReadProject = () => {
     return (
       <div>
         <h1>{projectData.title}</h1>
-        <h2>{projectData.description}</h2>
+        <img src={projectData.image} alt='project'/>
+        <h2>{`Description: ${projectData.description}`}</h2>
         <h3>Created at: {formattedDate}</h3>
         <h3>{`Is Open to pledges: ${projectData.is_open}`}</h3>
         <h3>Pledges:</h3>
@@ -72,8 +76,8 @@ const handleChange = (event) => {
                 {pledgeData.amount} from {pledgeData.supporter}"
                 {pledgeData.comment}"
               </li>
-            )
-          })}
+            );
+        })}
         </ul>
       </div>
     )
@@ -155,12 +159,12 @@ const handleChange = (event) => {
             <button onClick={() => setIsEditing(false)}>Cancel</button>
             <button onClick={handleClick}>Delete Project</button> 
           </form>
-        )
-        : <ReadProject />
-      }
+         ) : (
+        <ReadProject />
+    )}
       </div>
     </div>
-  )
+  );
 }
 
 
