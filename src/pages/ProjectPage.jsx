@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 
 const ProjectPage = () => {
     const [projectData, setProjectData] = useState({ pledges: [] });
     const [isEditing, setIsEditing] = useState(false);
+    const [error, setError] = useState(null);
+    const history = useHistory();
     const { id: project_id } = useParams();
+    const formattedDate = new Date(projectData.date_created).toLocaleDateString();
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}projects/${project_id}`)
@@ -16,23 +19,6 @@ const ProjectPage = () => {
             setProjectData(data);
           });
       }, [ project_id ]);
-
-//     return (
-//     <div>
-//         <h2>{projectData.title}</h2>
-//         <h3>Created at: {projectData.date_created}</h3>
-//         <h3>{`Status: ${projectData.is_open}`}</h3>
-//         <h3>Pledges:</h3>
-//         <ul>{projectData.pledges.map((pledgeData, key) =>{
-//             return (
-//             <li>{pledgeData.amount} from {pledgeData.supporter}
-//             </li>
-//             );
-//         })}
-//         </ul>
-//         </div>
-//         );
-// }
 
 const handleChange = (event) => {
     const { id, value } = event.target
@@ -45,42 +31,62 @@ const handleChange = (event) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await fetch(`
-      ${process.env.REACT_APP_API_URL}projects/${project_id}`, {
-      method: "put",
-      headers: {
-        "Authorization": `Token ${localStorage.getItem('token')}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ 
-        title: projectData.title,
-        description: projectData.description,
-        amount: projectData.amount,
-        image: projectData.image,
-        is_open: projectData.is_open
-      }),
-    })
-  }
+
+    try {
+        const response = await fetch(
+        `${process.env.REACT_APP_API_URL}projects/${project_id}`, 
+        {
+            method: "put",
+            headers: {
+            "Authorization": `Token ${localStorage.getItem('token')}`,
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(projectData),
+        }
+    );
+        if (!response.ok) {
+        const { detail } = await response.json()
+        throw new Error(detail)
+      }
+        } catch(err) {
+      if (err.message === "You do not have permission to perform this action.") {
+        history.push("/forbidden")
+      }
+      setError(err.message)
+    }
+    // setIsEditing(false);
+  };
 
   const ReadProject = () => {
     return (
       <div>
         <h1>{projectData.title}</h1>
         <h2>{projectData.description}</h2>
-        <h3>Created at: {new Date(projectData.date_created).toDateString()}</h3>
+        <h3>Created at: {formattedDate}</h3>
         <h3>{`Is Open to pledges: ${projectData.is_open}`}</h3>
         <h3>Pledges:</h3>
         <ul>
           {projectData.pledges.map((pledgeData, key) => {
             return (
               <li key={key}>
-                {pledgeData.amount} from {pledgeData.supporter}
+                {pledgeData.amount} from {pledgeData.supporter}"
+                {pledgeData.comment}"
               </li>
             )
           })}
         </ul>
       </div>
     )
+  }
+  console.log("project data is:", projectData);
+  
+  const handleClick = () => {
+    console.log("about to delete")
+    fetch(`${process.env.REACT_APP_API_URL}projects/${project_id}/`, {
+      method: 'DELETE'
+    }).then(() => {
+      history.push('/');
+    })
   }
 
   return (
@@ -144,8 +150,10 @@ const handleChange = (event) => {
                 onChange={handleChange}
               />
             </div>
-            <button type="submit">Submit</button>
-            <button onClick={() => setIsEditing(false)}>Cancel</button> 
+            <button type="submit">Update Project</button>
+            <div>{error && <div>{error}</div>}</div>
+            <button onClick={() => setIsEditing(false)}>Cancel</button>
+            <button onClick={handleClick}>Delete Project</button> 
           </form>
         )
         : <ReadProject />
