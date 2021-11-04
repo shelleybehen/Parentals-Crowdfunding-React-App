@@ -79,6 +79,7 @@ label.label3 {
 }
 
 .submit4 {
+  display: inline-block;
   cursor: pointer;
   color: #fff;
   background: #1553ffe6;
