@@ -8,7 +8,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import CreateProjectPage from './pages/CreateProjectPage';
 import Footer from './components/Footer/Footer'
-import ForbiddenPage from "./pages/Forbidden";
+import ForbiddenPage from "./pages/ForbiddenPage";
 
 
 function App() {
