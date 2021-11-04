@@ -76,21 +76,23 @@ label.label3 {
 
 .buttongroup {
   align-items: center;
-  width: 50%;
-  margin-bottom: 2%;
 }
 
 .submit4 {
-  display: inline-block;
-  justify-content: space-around;
   cursor: pointer;
   color: #fff;
   background: #1553ffe6;
   border: 0;
-  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   font-size: 1rem;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-  width: 10%;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-bottom: 2%;
 }
 
 .submit4:hover {
