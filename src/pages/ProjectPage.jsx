@@ -52,6 +52,7 @@ function ProjectPage() {
           throw new Error(detail)
         }
       } catch(err) {
+        alert('Only the owner can make changes or delete projects');
         if (err.message === "You do not have permission to perform this action.") {
           history.push("/forbiddenpage")
         }
