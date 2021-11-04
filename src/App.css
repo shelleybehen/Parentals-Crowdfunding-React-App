@@ -76,14 +76,9 @@ label.label3 {
 
 .buttongroup {
   align-items: center;
-  margin-left: 40%;
-  margin-right: 40%;
-  margin-bottom: 2%;
 }
 
 .submit4 {
-  display: inline-block;
-  justify-content: space-evenly;
   cursor: pointer;
   color: #fff;
   background: #1553ffe6;
@@ -95,6 +90,9 @@ label.label3 {
   font-size: 1rem;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
   width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-bottom: 2%;
 }
 
 .submit4:hover {
