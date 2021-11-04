@@ -33,7 +33,7 @@ function App() {
         <Route exactpath='/'>
         <HomePage />
         </Route>
-        <Route path="/ForbiddenPage">
+        <Route path="/forbiddenPage">
             <ForbiddenPage />
         </Route>
        </Switch>

@@ -53,7 +53,7 @@ function ProjectPage() {
         }
       } catch(err) {
         if (err.message === "You do not have permission to perform this action.") {
-          history.push("/forbidden")
+          history.push("/forbiddenpage")
         }
         setError(err.message)
       }
