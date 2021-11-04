@@ -105,15 +105,17 @@ function ProjectPage() {
         && isEditing === false 
         && <button onClick={() => setIsEditing(true)}>Edit Project</button> 
       }
-      <div>
+      <div className='updateproject'>
+      <p className='sign4' align='center'>Update or Delete a Campaign</p>
       {
         isEditing
         ? (
-          <form onSubmit={handleSubmit}>
+          <form className='form4' onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="title">Title:</label>
+              <label className='label3' htmlFor="title">Title:</label>
               <input
                 value={projectData.title}
+                className='field4'
                 type="text"
                 id="title"
                 placeholder=""
@@ -121,9 +123,10 @@ function ProjectPage() {
               />
             </div>
             <div>
-              <label htmlFor="description">Description:</label>
+              <label className='label3' htmlFor="description">Description:</label>
               <input
                 value={projectData.description}
+                className='field4'
                 type="text"
                 id="description"
                 placeholder=""
@@ -131,9 +134,10 @@ function ProjectPage() {
               />
             </div>
             <div>
-              <label htmlFor="goal">Goal:</label>
+              <label className='label3' htmlFor="goal">Goal:</label>
               <input
                 value={projectData.amount}
+                className='field4'
                 type="text"
                 id="amount"
                 placeholder=""
@@ -141,9 +145,10 @@ function ProjectPage() {
               />
             </div>
             <div>
-              <label htmlFor="image">Image:</label>
+              <label className='label3' htmlFor="image">Image:</label>
               <input
                 value={projectData.image}
+                className='field4'
                 type="text"
                 id="image"
                 placeholder=""
@@ -151,19 +156,20 @@ function ProjectPage() {
               />
             </div>
             <div>
-              <label htmlFor="is_open">Open:</label>
+              <label className='label3' htmlFor="is_open">Open:</label>
               <input
                 value={projectData.is_open}
+                className='field4'
                 type="text"
                 id="is_open"
                 placeholder=""
                 onChange={handleChange}
               />
             </div>
-            <button type="submit">Update Project</button>
+            <button className='submit4' type="submit">Update Project</button>
             <div>{error && <div>{error}</div>}</div>
-            <button onClick={() => setIsEditing(false)}>Cancel</button>
-            <button onClick={deleteProject}>Delete Project</button> 
+            <button className='submit4' onClick={() => setIsEditing(false)}>Cancel</button>
+            <button className='submit4' onClick={deleteProject}>Delete Project</button> 
           </form>
          ) : (
         <ReadProject />
