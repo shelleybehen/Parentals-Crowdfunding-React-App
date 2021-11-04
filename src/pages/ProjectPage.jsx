@@ -63,7 +63,7 @@ function ProjectPage() {
 
   const ReadProject = () => {
     return (
-      <div>
+      <div className='returnedproject'>
         <h1>{projectData.title}</h1>
         <img src={projectData.image} alt='project'/>
         <h2>{`Description: ${projectData.description}`}</h2>
