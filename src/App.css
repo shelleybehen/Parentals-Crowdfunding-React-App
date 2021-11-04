@@ -74,6 +74,12 @@ label.label3 {
   border: 2px solid #1553ffe6;
 }
 
+.buttongroup {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+
 .submit4 {
   cursor: pointer;
   color: #fff;
