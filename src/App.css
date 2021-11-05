@@ -83,10 +83,10 @@ label.label3 {
   color: #fff;
   background: #1553ffe6;
   border: 0;
-  padding: 10px;
+  padding: 1px;
   font-size: 1rem;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-  width: 33%;
+  width: 30%;
 }
 
 .submit4:hover {

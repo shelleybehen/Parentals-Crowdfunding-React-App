@@ -58,7 +58,6 @@ function ProjectPage() {
         }
         setError(err.message)
       }
-      // setIsEditing(false);
     };
 
   const ReadProject = () => {
@@ -168,9 +167,9 @@ function ProjectPage() {
             </div>
             <div className='buttongroup'>
             <button className='submit4' type="submit">Update Project</button>
-            <div>{error && <div>{error}</div>}</div>
             <button className='submit4' onClick={() => setIsEditing(false)}>Cancel</button>
             <button className='submit4' onClick={deleteProject}>Delete Project</button> 
+            <div>{error && <div>{error}</div>}</div>
             </div>
           </form>
          ) : (
