@@ -99,13 +99,14 @@ function ProjectPage() {
 
 
   return (
+    <div className='updateproject'>
+        <p className='sign4' align='center'>Update or Delete a Campaign</p>  
     <div>
       { localStorage.getItem('token') 
         && isEditing === false 
-        && <button className='submit5' onClick={() => setIsEditing(true)}>Edit Campaign</button> 
+        && <button className='submit5' onClick={() => setIsEditing(true)}>Edit This Campaign</button> 
       }
-      <div className='updateproject'>
-      <p className='sign4' align='center'>Update or Delete a Campaign</p>
+      
       {
         isEditing
         ? (
