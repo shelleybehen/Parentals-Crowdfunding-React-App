@@ -102,7 +102,7 @@ function ProjectPage() {
     <div>
       { localStorage.getItem('token') 
         && isEditing === false 
-        && <button onClick={() => setIsEditing(true)}>Edit Project</button> 
+        && <button className='submit4' onClick={() => setIsEditing(true)}>Edit Campaign</button> 
       }
       <div className='updateproject'>
       <p className='sign4' align='center'>Update or Delete a Campaign</p>
@@ -166,9 +166,9 @@ function ProjectPage() {
               />
             </div>
             <div className='buttongroup'>
-            <button className='submit4' type="submit">Update Project</button>
+            <button className='submit4' type="submit">Update Campaign</button>
             <button className='submit4' onClick={() => setIsEditing(false)}>Cancel</button>
-            <button className='submit4' onClick={deleteProject}>Delete Project</button> 
+            <button className='submit4' onClick={deleteProject}>Delete Campaign</button> 
             <div>{error && <div>{error}</div>}</div>
             </div>
           </form>
