@@ -104,7 +104,7 @@ function ProjectPage() {
     <div>
       { localStorage.getItem('token') 
         && isEditing === false 
-        && <button className='submit5' onClick={() => setIsEditing(true)}>Edit This Campaign</button> 
+        && <button className='submit5' align='center' onClick={() => setIsEditing(true)}>Edit This Campaign</button> 
       }
       
       {
