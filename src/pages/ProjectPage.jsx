@@ -102,11 +102,12 @@ function ProjectPage() {
     <div className='updateproject'>
         <p className='sign4' align='center'>Update or Delete a Campaign</p>  
     <div>
+        <div className='editbox'>
       { localStorage.getItem('token') 
         && isEditing === false 
         && <button className='submit5' align='center' onClick={() => setIsEditing(true)}>Edit This Campaign</button> 
       }
-      
+      </div>
       {
         isEditing
         ? (
