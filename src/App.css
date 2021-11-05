@@ -44,6 +44,7 @@ form.form4 {
 }
 
 .submit5 {
+  justify-content: center;
   cursor: pointer;
   color: #fff;
   background: #1553ffe6;
@@ -51,9 +52,7 @@ form.form4 {
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 10px;
-  padding-top: 10px;
-  margin-left: 35%;
-  margin-bottom: 10px;
+  padding-top: 40px;
   font-size: 1rem;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
 }
