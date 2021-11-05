@@ -79,7 +79,7 @@ label.label3 {
 }
 
 .submit4 {
-  display: inline-block;
+  display: inline;
   cursor: pointer;
   color: #fff;
   background: #1553ffe6;
@@ -87,8 +87,8 @@ label.label3 {
   padding: 10px;
   font-size: 1rem;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 75px;
 }
 
 .submit4:hover {
