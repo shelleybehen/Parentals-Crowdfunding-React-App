@@ -66,14 +66,14 @@ function ProjectPage() {
         <h1>{projectData.title}</h1>
         <img src={projectData.image} alt='project'/>
         <h2>{`Description: ${projectData.description}`}</h2>
-        <h3>Created at: {formattedDate}</h3>
+        <h3>Created on: {formattedDate}</h3>
         <h3>{`Is Open to pledges: ${projectData.is_open}`}</h3>
         <h3>Pledges:</h3>
         <ul>
           {projectData.pledges.map((pledgeData, key) => {
             return (
               <li key={key}>
-                {pledgeData.amount} from {pledgeData.supporter}"
+                {pledgeData.amount} hours donated from user number {pledgeData.supporter}. Comment:  "
                 {pledgeData.comment}"
               </li>
             );
