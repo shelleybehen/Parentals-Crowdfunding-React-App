@@ -75,11 +75,10 @@ label.label3 {
 }
 
 .buttongroup {
-  align-items: center;
+  width: 100%;
 }
 
 .submit4 {
-  display: inline;
   cursor: pointer;
   color: #fff;
   background: #1553ffe6;
@@ -87,8 +86,7 @@ label.label3 {
   padding: 10px;
   font-size: 1rem;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-  width: 150px;
-  height: 75px;
+  width: 33%;
 }
 
 .submit4:hover {
