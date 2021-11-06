@@ -1,5 +1,4 @@
 body {
-  background-color: #68dd56;
   font-family: Poppins, sans-serif;
   width: 100vw;
   height: 100vh;
@@ -65,7 +64,7 @@ form.modal2 {
 .submit2 {
   cursor: pointer;
   color: #fff;
-  background: #0b5351;
+  background: #4e8098;
   border: 0;
   padding-left: 40px;
   padding-right: 40px;
