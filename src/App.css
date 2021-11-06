@@ -17,7 +17,7 @@ body {
 }
 
 .returnedproject {
-  background-color: 00a9a5;
+  background-color: white;
   margin: 7em auto;
   box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
   width: 60%;
@@ -45,6 +45,13 @@ form.form4 {
   padding-top: 40px;
   color: #4e8098;
   font-size: 23px;
+}
+
+.buttongroup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .submit5 {
@@ -95,10 +102,6 @@ label.label3 {
 
 .field4:hover {
   border: 2px solid #0b5351;
-}
-
-.buttongroup {
-  width: 100%;
 }
 
 .submit4 {
