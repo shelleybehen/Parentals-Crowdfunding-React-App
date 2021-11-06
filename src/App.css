@@ -46,8 +46,7 @@ form.form4 {
   color: #4e8098;
   font-size: 23px;
 }
-
-.buttongroup {
+.editbox {
   width: 100%;
   display: grid;
 }
@@ -99,6 +98,13 @@ label.label3 {
 
 .field4:hover {
   border: 2px solid #0b5351;
+}
+
+.buttongroup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .submit4 {
