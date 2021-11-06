@@ -30,6 +30,7 @@ function ProjectPage() {
           ...projectData,
           [id]: value,
         });
+        history.push('/')
     };
 
   const handleSubmit = async (e) => {
@@ -54,7 +55,7 @@ function ProjectPage() {
       } catch(err) {
         alert('Only the owner can make changes or delete projects');
         if (err.message === "You do not have permission to perform this action.") {
-          history.push("/forbiddenpage")
+          history.push('/')
         }
         setError(err.message)
       }
@@ -168,7 +169,7 @@ function ProjectPage() {
               />
             </div>
             <div className='buttongroup'>
-            <button className='submit4' type="submit" value='reset'>Update Campaign</button>
+            <button className='submit4' type="submit">Update Campaign</button>
             <button className='submit4' onClick={() => setIsEditing(false)}>Cancel</button>
             <button className='submit4' onClick={deleteProject}>Delete Campaign</button> 
             <div>{error && <div>{error}</div>}</div>
