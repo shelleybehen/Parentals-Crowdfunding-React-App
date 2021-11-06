@@ -30,7 +30,6 @@ function ProjectPage() {
           ...projectData,
           [id]: value,
         });
-        history.push('/')
     };
 
   const handleSubmit = async (e) => {
