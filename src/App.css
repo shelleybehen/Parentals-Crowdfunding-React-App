@@ -49,9 +49,7 @@ form.form4 {
 
 .buttongroup {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
 }
 
 .submit5 {
@@ -59,8 +57,7 @@ form.form4 {
   color: #fff;
   background: #4e8098;
   border: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 10px;
