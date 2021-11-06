@@ -16,12 +16,12 @@ body {
 
 form.form1 {
   padding-top: 40px;
-  background-color: grey;
+  background-color: #90c2e7;
 }
 
 .sign {
   padding: 10px 10px 10px 10px;
-  color: #1553ffe6;
+  color: #4e8098;
   font-size: 23px;
   font-weight: 700;
 }
@@ -43,13 +43,13 @@ form.form1 {
 }
 
 .field:hover {
-  border: 2px solid #1553ffe6;
+  border: 2px solid #0b5351;
 }
 
 .submit {
   cursor: pointer;
   color: #fff;
-  background: #1553ffe6;
+  background: #0b5351;
   border: 0;
   padding-left: 40px;
   padding-right: 40px;

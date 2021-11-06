@@ -1,5 +1,5 @@
 body {
-  background-color: #68dd56;
+  background-color: #00a9a5;
   font-family: Poppins, sans-serif;
   width: 100vw;
   height: 100vh;
@@ -19,12 +19,12 @@ input {
 
 form.form3 {
   padding-top: 20px;
-  background-color: grey;
+  background-color: 90c2e7;
 }
 
 .sign3 {
   padding-top: 40px;
-  color: #1553ffe6;
+  color: #4e8098;
   font-size: 23px;
 }
 
@@ -45,13 +45,13 @@ form.form3 {
 }
 
 .field3:hover {
-  border: 2px solid #1553ffe6;
+  border: 2px solid #0b5351;
 }
 
 .submit3 {
   cursor: pointer;
   color: #fff;
-  background: #1553ffe6;
+  background: #0b5351;
   border: 0;
   padding-left: 40px;
   padding-right: 40px;

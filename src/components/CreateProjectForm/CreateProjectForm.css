@@ -25,12 +25,12 @@ input {
 
 form.form2 {
   padding-top: 40px;
-  background-color: grey;
+  background-color: gre90c2e7y;
 }
 
 .sign2 {
   padding-top: 40px;
-  color: #1553ffe6;
+  color: #4e8098;
   font-size: 23px;
 }
 
@@ -59,13 +59,13 @@ form.modal2 {
 }
 
 .field2:hover {
-  border: 2px solid #1553ffe6;
+  border: 2px solid #0b5351;
 }
 
 .submit2 {
   cursor: pointer;
   color: #fff;
-  background: #1553ffe6;
+  background: #0b5351;
   border: 0;
   padding-left: 40px;
   padding-right: 40px;
