@@ -64,7 +64,7 @@ function ProjectPage() {
     return (
       <div className='returnedproject'>
         <h1>{projectData.title}</h1>
-        <img src={projectData.image} alt='project'/>
+        <img src={projectData.image} width='60%' height='60%' alt='project'/>
         <h2>{`Description: ${projectData.description}`}</h2>
         <h3>Created on: {formattedDate}</h3>
         <h3>{`Is Open to pledges: ${projectData.is_open}`}</h3>
