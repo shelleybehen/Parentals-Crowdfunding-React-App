@@ -101,7 +101,7 @@ function ProjectPage() {
   return (
     <div className='updateproject'>
         <p className='sign4' align='center'>Update or Delete a Campaign</p>  
-    <div>
+    <div className='form5'>
         <div className='editbox'>
       { localStorage.getItem('token') 
         && isEditing === false 
