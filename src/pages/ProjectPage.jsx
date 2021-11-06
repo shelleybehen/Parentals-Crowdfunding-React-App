@@ -168,7 +168,7 @@ function ProjectPage() {
               />
             </div>
             <div className='buttongroup'>
-            <button className='submit4' type="submit">Update Campaign</button>
+            <button className='submit4' type="submit" value='reset'>Update Campaign</button>
             <button className='submit4' onClick={() => setIsEditing(false)}>Cancel</button>
             <button className='submit4' onClick={deleteProject}>Delete Campaign</button> 
             <div>{error && <div>{error}</div>}</div>
