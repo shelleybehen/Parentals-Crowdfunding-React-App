@@ -42,7 +42,6 @@ const CreatePledgeForm = () => {
     <div className='project-page'>
       <div className='proj-form'>
         <h3 className="sign2" align='center'>I can help!</h3>
-      </div>
       <form className='form2' >
         <div>
           <input className='field2'
@@ -60,15 +59,6 @@ const CreatePledgeForm = () => {
             onChange={handleChange}
           />
         </div>
-        {/* <div>
-          <input
-            name="project_id"
-            type="text"
-            id="project_id"
-            placeholder="Project ID"
-            onChange={handleChange}
-          />
-        </div> */}
         <button
           className='submit2'
           type='submit'
@@ -78,6 +68,7 @@ const CreatePledgeForm = () => {
         </button>
         <div>{submitMessage}</div>
       </form>
+      </div>
     </div>
   );
 };

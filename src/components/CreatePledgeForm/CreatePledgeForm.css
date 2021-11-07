@@ -12,6 +12,7 @@ label.label1 {
 
 input {
   display: inline-block;
+  margin: auto;
 }
 
 .proj-form {
