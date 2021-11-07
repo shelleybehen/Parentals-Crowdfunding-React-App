@@ -49,7 +49,7 @@ const RegisterForm= () => {
     return (
         <div className="user-page">
             <div className="user-form">
-                <p className="sign3" align="center">Create a User Account</p>
+                <h3 className="sign3" align="center">Create a User Account</h3>
         <form className="form3">
         <div>
             <input value={userInfo.username} className="field3"  align="center" type="text" id="username" placeholder="Enter Username" onChange={handleChange} />

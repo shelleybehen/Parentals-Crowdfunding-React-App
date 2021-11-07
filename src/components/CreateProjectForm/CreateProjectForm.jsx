@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
 import './CreateProjectForm.css'
 
 const CreateProjectForm = () => {
-    // const history = useHistory ();
     const startingValues = {
         title: '',
         description: '',
@@ -47,21 +45,16 @@ const CreateProjectForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // if (window.localStorage.getItem('token')) {
-        postData().then((response) => {
+            postData().then((response) => {
             console.log('response from our API --------', response);
             setProjectInfo(startingValues)
-          // window.localStorage.setItem('token', response.token);
-          // history.push('/');
         });
-        // }
     };
-    
     
     return (
         <div className='project-page'>
             <div className='proj-form'>
-                <p className='sign2' align='center'>Create a new Campaign</p>
+                <h3 className='sign2' align='center'>Create a new Campaign</h3>
         <form className='form2'>
         <div>
         <label className='label1' htmlFor='title'>Project Title: </label>

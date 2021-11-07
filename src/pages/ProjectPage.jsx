@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
+import PledgeForm from "../components/CreatePledgeForm/CreatePledgeForm"
 
 
 function ProjectPage() {
@@ -68,6 +69,8 @@ function ProjectPage() {
         <h2>{`Description: ${projectData.description}`}</h2>
         <h3>Created on: {formattedDate}</h3>
         <h3>{`Is Open to pledges: ${projectData.is_open}`}</h3>
+        <PledgeForm />
+        <div className="container-pledges">
         <h3>Pledges:</h3>
         <ul>
           {projectData.pledges.map((pledgeData, key) => {
@@ -79,6 +82,7 @@ function ProjectPage() {
             );
         })}
         </ul>
+      </div>
       </div>
     )
   }
@@ -100,7 +104,7 @@ function ProjectPage() {
 
   return (
     <div className='updateproject'>
-        <p className='sign4' align='center'>Update or Delete a Campaign</p>  
+        <h3 className='sign4' align='center'>Update or Delete a Campaign</h3>  
     <div className='form5'>
         <div className='editbox'>
       { localStorage.getItem('token') 

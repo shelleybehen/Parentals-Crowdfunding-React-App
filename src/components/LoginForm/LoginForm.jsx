@@ -43,7 +43,7 @@ function LoginForm() {
     return (
         <div className='login-page'>
             <div className='main'>
-            <p className='sign' align='center'>Login</p>
+            <h3 className='sign' align='center'>Login</h3>
             <form onSubmit={handleSubmit} className='form1'>
                 <div>
                 <input className='field' align='center' type='text' id='username' placeholder='Enter Username' onChange={handleChange} />
