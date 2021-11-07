@@ -65,7 +65,7 @@ const CreatePledgeForm = () => {
           type='submit'
           onClick={handlePledgeSubmit}
         >
-          Submit Pledge
+          Submit
         </button>
         <div>{submitMessage}</div>
         </div>
