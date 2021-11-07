@@ -18,7 +18,7 @@ input {
 }
 
 form.form3 {
-  padding-top: 20px;
+  padding-top: 40px;
   background-color: #90c2e7;
 }
 
@@ -37,6 +37,7 @@ form.form3 {
   box-sizing: border-box;
   text-align: center;
   border: none;
+  outline: none;
   margin-bottom: 27px;
   font-family: Poppins, sans-serif;
   background-color: white;
