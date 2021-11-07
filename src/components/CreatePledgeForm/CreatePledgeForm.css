@@ -12,12 +12,12 @@ body {
   padding: 10px;
 }
 
-form.form2 {
+form.form8 {
   padding-top: 40px;
   background-color: #90c2e7;
 }
 
-.sign2 {
+.sign8 {
   padding: 10px 10px 10px 10px;
   color: #4e8098;
   font-size: 23px;
@@ -26,7 +26,7 @@ input {
   display: inline-block;
 }
 
-.field2 {
+.field8 {
   width: 60%;
   color: rgb(38, 50, 56);
   font-weight: 700;
@@ -44,7 +44,7 @@ input {
   background-color: white;
 }
 
-.field2:hover {
+.field8:hover {
   border: 2px solid #0b5351;
 }
 

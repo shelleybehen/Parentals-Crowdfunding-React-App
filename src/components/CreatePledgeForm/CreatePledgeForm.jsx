@@ -41,10 +41,10 @@ const CreatePledgeForm = () => {
   return (
     <div className='project-page'>
       <div className='proj-form'>
-        <h3 className="sign2" align='center'>I can help!</h3>
-      <form className='form2' >
+        <h3 className="sign8" align='center'>I can help!</h3>
+      <form className='form8' >
         <div>
-          <input className='field2'
+          <input className='field8'
             name="amount"
             type="text"
             placeholder="Amount"
@@ -52,7 +52,7 @@ const CreatePledgeForm = () => {
           />
         </div>
         <div>
-          <input className='field2'
+          <input className='field8'
             name="comment"
             type="text"
             placeholder="Comment"
