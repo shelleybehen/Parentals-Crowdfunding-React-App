@@ -40,7 +40,7 @@ const CreatePledgeForm = () => {
 
   return (
     <div className='project-page'>
-      <div className='proj-form'>
+      <div className='proj-form2'>
         <h3 className="sign8" align='center'>I can help!</h3>
       <form className='form8' >
         <div>
