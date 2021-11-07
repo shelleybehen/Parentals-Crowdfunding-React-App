@@ -61,7 +61,7 @@ const CreatePledgeForm = () => {
         </div>
         <div className='editbox2'>
         <button
-          className='submit4'
+          className='submit6'
           type='submit'
           onClick={handlePledgeSubmit}
         >
