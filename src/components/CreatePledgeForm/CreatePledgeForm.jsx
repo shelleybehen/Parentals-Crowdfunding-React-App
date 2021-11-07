@@ -59,6 +59,7 @@ const CreatePledgeForm = () => {
             onChange={handleChange}
           />
         </div>
+        <div className='editbox2'>
         <button
           className='submit2'
           type='submit'
@@ -67,6 +68,7 @@ const CreatePledgeForm = () => {
           Submit Pledge
         </button>
         <div>{submitMessage}</div>
+        </div>
       </form>
       </div>
     </div>
