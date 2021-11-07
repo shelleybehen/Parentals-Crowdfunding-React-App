@@ -32,9 +32,10 @@ form.form1 {
   font-size: 14px;
   letter-spacing: 1px;
   padding: 10px 20px;
-  box-sizing: border-box;
+  box-sizing: content-box;
   text-align: center;
   border: none;
+  outline: none;
   margin-bottom: 27px;
   font-family: Poppins, sans-serif;
   background-color: white;

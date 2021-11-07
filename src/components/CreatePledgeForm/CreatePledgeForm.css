@@ -1,8 +1,10 @@
 body {
+  background-color: #00a9a5;
   font-family: Poppins, sans-serif;
   width: 100vw;
   height: 100vh;
 }
+
 label.label1 {
   display: inline-block;
   width: 10em;
@@ -15,10 +17,11 @@ input {
 }
 
 .proj-form {
+  width: 400px;
+  height: 330px;
   background-color: white;
   margin: 7em auto;
   box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-  width: 60%;
   padding: 10px;
 }
 
@@ -28,32 +31,27 @@ form.form2 {
 }
 
 .sign2 {
-  padding-top: 40px;
+  padding: 10px 10px 10px 10px;
   color: #4e8098;
   font-size: 23px;
 }
 
 .field2 {
-  width: 50%;
+  width: 60%;
   color: rgb(38, 50, 56);
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 1px;
-  background: rgba(136, 126, 126, 0.1);
   padding: 10px 20px;
   border: none;
   outline: none;
   box-sizing: content-box;
-  margin-bottom: 50px;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-bottom: 27px;
+  margin-left: 20%;
+  margin-right: 20%;
   text-align: center;
   font-family: Poppins, sans-serif;
   background-color: white;
-}
-
-form.modal2 {
-  padding-top: 40px;
 }
 
 .field2:hover {
@@ -71,10 +69,8 @@ form.modal2 {
   padding-top: 10px;
   font-size: 1rem;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-  width: 40%;
-  margin-left: 30%;
-  margin-right: 30%;
-  margin-bottom: 2%;
+  margin-left: 35%;
+  margin-bottom: 10%;
 }
 
 .submit2:hover {
